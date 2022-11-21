@@ -15,7 +15,7 @@ const games = [
 
 const appLocation = "https://andreasjonsson.se/virtualxt";
 
-var currentGameIndex = 0;
+var currentGameIndex = Math.floor(Math.random() * games.length);
 var currentGame = games[currentGameIndex];
 
 window.onload = () => {
@@ -31,7 +31,7 @@ function updateGame() {
     description.innerText = currentGame.description;
 
     screenshot.src = "games/" + currentGame.screenshot;
-    screenshot.setAttribute("href", appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin);
+    screenshot.parentNode.href = appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin;
 }
 
 function prevGame() {

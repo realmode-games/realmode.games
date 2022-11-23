@@ -10,6 +10,12 @@ img.screenshot {
   width: 628px;
 }
 
+hr {
+  height: 2px;
+  background-color: #BBBBBB;
+  border: none;
+}
+
 /* Custom container */
 .container-narrow {
   margin: 0 auto;

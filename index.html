@@ -7,17 +7,18 @@
 
     <script src="script.js"></script>
 
-    <link href="style.css" rel="stylesheet">
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
 
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
     <div class="container-narrow">
-
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li><a href="https://github.com/andreas-jonsson/virtualxt">Source</a></li>
+          <li><a href="https://virtualxt.org">Emulator</a></li>
+          <li><a href="https://github.com/realmode-games/realmode.games/tree/main/games">Games</a></li>
+          <li><a href="https://github.com/realmode-games/realmode.games">Source</a></li>
         </ul>
       </div>
 
@@ -27,17 +28,15 @@
         <h1 id="game-name"></h1>
       </div>
 
-      <hr><br>
-
       <div class="hero-unit">
         <a href="" target="_blank"><img class="screenshot" id="game-screenshot" width="640" height="480"/></a><br><br>
 
-        <p id="game-description"></p>
-      </div>
-      
-      <br>
-      
-      <div class="hero-unit">
+        <div style="height: 80px; color: black; background-color: #BBBBBB; padding: 8px;">
+          <p id="game-description"></p>
+        </div>
+
+        <br>
+
         <table style="width: 100%;">
           <tr>
             <th style="width: 42%;"><a class="btn btn-large btn-success pull-left unselectable" onclick="prevGame();">PREV</a></th>

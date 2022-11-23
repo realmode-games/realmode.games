@@ -3,17 +3,17 @@ const games = [
         title: "Bomber och Bumlingar",
         screenshot: "bomber/bomber.png",
         bin: "bomber/bomber.img",
-        description: "Game description missing. :("
+        description: "Bomber and Bumblingar is a swedish game about trying to avoid dangerous creatures and obstacles like falling rocks, also being crushed or trapped by an avalanche, or killed by an explosion from the bombs."
     },
     {
         title: "Chopper Commando",
         screenshot: "chopper/chopper.png",
         bin: "chopper/chopper.img",
-        description: "Game description missing. :("
+        description: "Chopper Commando is an arcade chopper game. You fly missions to destroy specific enemies or safely land at a base on the opposite side of enemy territory."
     }
 ];
 
-const appLocation = "https://andreasjonsson.se/virtualxt";
+const appLocation = "https://app.virtualxt.org";
 
 var currentGameIndex = Math.floor(Math.random() * games.length);
 var currentGame = games[currentGameIndex];
@@ -27,7 +27,8 @@ function updateGame() {
     const screenshot = document.getElementById("game-screenshot");
     const header = document.getElementById("game-name");
 
-    header.innerText = currentGame.title;
+    const maxWidth = 18;
+    header.innerText = (currentGame.title.length <= maxWidth) ? currentGame.title : currentGame.title.substring(0, maxWidth - 3) + "_";
     description.innerText = currentGame.description;
 
     screenshot.src = "games/" + currentGame.screenshot;

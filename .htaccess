@@ -1,4 +1,0 @@
-Options +FollowSymLinks
-RewriteEngine On
-RewriteBase /
-RewriteRule .* https://phix.itch.io/virtualxt/? [R=301,L]

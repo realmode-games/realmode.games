@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+RewriteRule .* https://www.newdomain.com/? [R=301,L]

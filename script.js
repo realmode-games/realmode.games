@@ -16,6 +16,12 @@ const games = [
         screenshot: "keen/keen_cga.png",
         bin: "keen/keen4c_hd.img",
         description: "Commander Keen 4: Secret of the Oracle is a platform game, the fourth in the Commander Keen series as a whole, and the first in the second series Goodbye, Galaxy."
+    },
+    {
+        title: "ZZT",
+        screenshot: "zzt/zzt.png",
+        bin: "zzt/zzt.img",
+        description: "ZZT is a 1991 action-adventure puzzle video game and game creation system developed and published by Potomac Computer Systems for MS-DOS. The game was designed by the then mechanical engineering student Tim Sweeney."
     }
 ];
 

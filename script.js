@@ -1,37 +1,17 @@
-const games = [
-    {
-        title: "Bomber och Bumlingar",
-        screenshot: "bomber/bomber.png",
-        bin: "bomber/bomber.img",
-        description: "Bomber and Bumblingar is a swedish game about trying to avoid dangerous creatures and obstacles like falling rocks, also being crushed or trapped by an avalanche, or killed by an explosion from the bombs."
-    },
-    {
-        title: "Chopper Commando",
-        screenshot: "chopper/chopper.png",
-        bin: "chopper/chopper.img",
-        description: "Chopper Commando is an arcade chopper game. You fly missions to destroy specific enemies or safely land at a base on the opposite side of enemy territory."
-    },
-    {
-        title: "Commander Keen 4",
-        screenshot: "keen/keen_cga.png",
-        bin: "keen/keen4c_hd.img",
-        description: "Commander Keen 4: Secret of the Oracle is a platform game, the fourth in the Commander Keen series as a whole, and the first in the second series Goodbye, Galaxy."
-    },
-    {
-        title: "ZZT",
-        screenshot: "zzt/zzt.png",
-        bin: "zzt/zzt.img",
-        description: "ZZT is a 1991 action-adventure puzzle video game and game creation system developed and published by Potomac Computer Systems for MS-DOS. The game was designed by the then mechanical engineering student Tim Sweeney."
-    }
-];
-
 const appLocation = "https://app.virtualxt.org";
+const jsonPromis = fetch("games/games.json").then((response) => response.json());
 
-var currentGameIndex = Math.floor(Math.random() * games.length);
-var currentGame = games[currentGameIndex];
+var games = null;
+var currentGame = null;
+var currentGameIndex = 0;
 
 window.onload = () => {
-    updateGame();
+    jsonPromis.then((json) => {
+        currentGameIndex = Math.floor(Math.random() * json.length);
+        currentGame = json[currentGameIndex];
+        games = json;
+        updateGame();
+    });
 };
 
 function updateGame() {
@@ -48,6 +28,8 @@ function updateGame() {
 }
 
 function prevGame() {
+    if (!currentGame)
+        return;
     currentGameIndex--;
     if (currentGameIndex < 0) {
         currentGameIndex = games.length - 1;
@@ -57,6 +39,8 @@ function prevGame() {
 }
 
 function nextGame() {
+    if (!currentGame)
+        return;
     currentGameIndex++;
     if (currentGameIndex >= games.length) {
         currentGameIndex = 0;
@@ -66,5 +50,7 @@ function nextGame() {
 }
 
 function playGame() {
+    if (!currentGame)
+        return;
     window.open(appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin, "_blank");
 }

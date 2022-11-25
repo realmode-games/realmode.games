@@ -10,6 +10,12 @@ const games = [
         screenshot: "chopper/chopper.png",
         bin: "chopper/chopper.img",
         description: "Chopper Commando is an arcade chopper game. You fly missions to destroy specific enemies or safely land at a base on the opposite side of enemy territory."
+    },
+    {
+        title: "Commander Keen 4",
+        screenshot: "keen/keen_cga.png",
+        bin: "keen/keen4c_hd.img",
+        description: "Commander Keen 4: Secret of the Oracle is a platform game, the fourth in the Commander Keen series as a whole, and the first in the second series Goodbye, Galaxy."
     }
 ];
 

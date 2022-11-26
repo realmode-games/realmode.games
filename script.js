@@ -7,12 +7,24 @@ var currentGameIndex = 0;
 
 window.onload = () => {
     jsonPromis.then((json) => {
-        currentGameIndex = Math.floor(Math.random() * json.length);
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has("game"))
+            currentGameIndex = Math.min(Math.abs(parseInt(urlParams.get("game"))), json.length - 1);
+        else
+            currentGameIndex = Math.floor(Math.random() * json.length);
+
         currentGame = json[currentGameIndex];
         games = json;
         updateGame();
     });
 };
+
+function buildURL() {
+    var url = appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin + "&ret=https%253A//realmode.games%3Fgame%3D" + currentGameIndex;
+    if (currentGame.options)
+        url += "&" + currentGame.options;
+    return url;
+}
 
 function updateGame() {
     const description = document.getElementById("game-description");
@@ -26,11 +38,7 @@ function updateGame() {
 
     title.innerText = currentGame.title;
     screenshot.src = "games/" + currentGame.screenshot;
-
-    var url = appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin;
-    if (currentGame.options)
-        url += "&" + currentGame.options;
-    screenshot.parentNode.href = url;
+    screenshot.parentNode.href = buildURL();
 }
 
 function prevGame() {
@@ -58,8 +66,5 @@ function nextGame() {
 function playGame() {
     if (!currentGame)
         return;
-    var url = appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin;
-    if (currentGame.options)
-        url += "&" + currentGame.options;
-    window.open(url, "_blank");
+    window.open(buildURL(), "_blank");
 }

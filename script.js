@@ -66,5 +66,5 @@ function nextGame() {
 function playGame() {
     if (!currentGame)
         return;
-    window.open(buildURL(), "_blank");
+    window.open(buildURL());
 }

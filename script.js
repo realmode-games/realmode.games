@@ -56,5 +56,8 @@ function nextGame() {
 function playGame() {
     if (!currentGame)
         return;
-    window.open(appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin, "_blank");
+    var url = appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin;
+    if (currentGame.options)
+        url += "&" + currentGame.options;
+    window.open(url, "_blank");
 }

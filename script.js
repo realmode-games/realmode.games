@@ -24,7 +24,11 @@ function updateGame() {
     description.innerText = currentGame.description;
 
     screenshot.src = "games/" + currentGame.screenshot;
-    screenshot.parentNode.href = appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin;
+
+    var url = appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin;
+    if (currentGame.options)
+        url += "&" + currentGame.options;
+    screenshot.parentNode.href = url;
 }
 
 function prevGame() {

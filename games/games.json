@@ -23,7 +23,6 @@
         "title": "ZZT",
         "screenshot": "zzt/zzt.png",
         "bin": "zzt/zzt.img",
-        "options": "mouse=0",
         "description": "ZZT is a 1991 action-adventure puzzle video game and game creation system developed and published by Potomac Computer Systems for MS-DOS. The game was designed by the then mechanical engineering student Tim Sweeney."
     },
     {

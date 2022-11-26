@@ -17,12 +17,14 @@ window.onload = () => {
 function updateGame() {
     const description = document.getElementById("game-description");
     const screenshot = document.getElementById("game-screenshot");
-    const header = document.getElementById("game-name");
+    const header = document.getElementById("game-title");
+    const title = document.getElementById("game-title2");
 
     const maxWidth = 18;
     header.innerText = (currentGame.title.length <= maxWidth) ? currentGame.title : currentGame.title.substring(0, maxWidth - 3) + "_";
     description.innerText = currentGame.description;
 
+    title.innerText = currentGame.title;
     screenshot.src = "games/" + currentGame.screenshot;
 
     var url = appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin;

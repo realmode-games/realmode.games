@@ -39,6 +39,7 @@ function updateGame() {
     title.innerText = currentGame.title;
     screenshot.src = "games/" + currentGame.screenshot;
     screenshot.parentNode.href = buildURL();
+    screenshot.parentNode.target = "_self";
 }
 
 function prevGame() {
@@ -66,5 +67,5 @@ function nextGame() {
 function playGame() {
     if (!currentGame)
         return;
-    window.open(buildURL());
+    window.open(buildURL(), "_self");
 }

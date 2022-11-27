@@ -20,7 +20,7 @@ window.onload = () => {
 };
 
 function buildURL() {
-    var url = appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin + "&ret=https%253A//realmode.games%3Fgame%3D" + currentGameIndex;
+    var url = appLocation + "?img=https%3A//realmode.games/games/" + currentGame.bin + "&ret=https%3A//realmode.games%3Fgame%3D" + currentGameIndex;
     if (currentGame.options)
         url += "&" + currentGame.options;
     return url;

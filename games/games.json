@@ -10,6 +10,7 @@
         "title": "Chopper Commando",
         "screenshot": "chopper/chopper.png",
         "bin": "chopper/chopper.img",
+        "options": "mouse=0",
         "description": "Chopper Commando is an arcade chopper game. You fly missions to destroy specific enemies or safely land at a base on the opposite side of enemy territory."
     },
     {

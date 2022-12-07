@@ -17,19 +17,21 @@
         "title": "Commander Keen 4",
         "screenshot": "keen/keen_cga.png",
         "bin": "keen/keen4c_hd.img",
-        "options": "mouse=0",
+        "options": "mouse=0&storage=1",
         "description": "Commander Keen 4: Secret of the Oracle is a platform game, the fourth in the Commander Keen series as a whole, and the first in the second series Goodbye, Galaxy."
     },
     {
         "title": "ZZT",
         "screenshot": "zzt/zzt.png",
         "bin": "zzt/zzt.img",
+        "options": "storage=1",
         "description": "ZZT is a 1991 action-adventure puzzle video game and game creation system developed and published by Potomac Computer Systems for MS-DOS. The game was designed by the then mechanical engineering student Tim Sweeney."
     },
     {
         "title": "The Secret of Monkey Island",
         "screenshot": "monkey/monkey.png",
         "bin": "monkey/monkey.img",
+        "options": "storage=1",
         "description": "The game starts off with the main character Guybrush Threepwood stating \"I want to be a pirate!\" To do so, he must prove himself to three old pirate captains."
     }
 ]

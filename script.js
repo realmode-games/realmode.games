@@ -32,8 +32,8 @@ function updateGame() {
     const header = document.getElementById("game-title");
     const title = document.getElementById("game-title2");
 
-    const maxWidth = 18;
-    header.innerText = (currentGame.title.length <= maxWidth) ? currentGame.title : currentGame.title.substring(0, maxWidth - 3) + "_";
+    const maxWidth = 16;
+    header.innerText = (currentGame.title.length <= maxWidth) ? currentGame.title : (currentGame.title.substring(0, maxWidth).trim() + "_");
     description.innerText = currentGame.description;
 
     title.innerText = currentGame.title;

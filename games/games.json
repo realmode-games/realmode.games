@@ -33,5 +33,12 @@
         "bin": "monkey/monkey.img",
         "options": "storage=1",
         "description": "The game starts off with the main character Guybrush Threepwood stating \"I want to be a pirate!\" To do so, he must prove himself to three old pirate captains."
+    },
+    {
+        "title": "Wolfenstein 3D CGA",
+        "screenshot": "wolf3dc/wolf3dc.png",
+        "bin": "wolf3dc/wolf3dc.img",
+        "options": "mouse=0&storage=1",
+        "description": "This project is a modification to the original Wolfenstein 3D source release which renders the game in CGA video modes. The engine has also been modified so that it can be run on 8088 based CPUs, allowing it to be run on a wide variety of old PC hardware."
     }
 ]

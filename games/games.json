@@ -38,7 +38,7 @@
         "title": "Wolfenstein 3D CGA",
         "screenshot": "wolf3dc/wolf3dc.png",
         "bin": "wolf3dc/wolf3dc.img",
-        "options": "mouse=0&storage=1&freq=16%v20=1",
+        "options": "mouse=0&storage=1&freq=16&v20=1",
         "description": "This project is a modification to the original Wolfenstein 3D source release which renders the game in CGA video modes allowing it to be run on a wide variety of old PC hardware."
     }
 ]

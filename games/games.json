@@ -28,6 +28,13 @@
         "description": "ZZT is a 1991 action-adventure puzzle video game and game creation system developed and published by Potomac Computer Systems for MS-DOS. The game was designed by the then mechanical engineering student Tim Sweeney."
     },
     {
+        "title": "Dungeon Explorer",
+        "screenshot": "explorer/explorer.png",
+        "bin": "explorer/explorer.img",
+        "options": "storage=1",
+        "description": "In Dungeon Explorer you create a character, buy equipment and explore a dungeon or ruin. You must defeat whatever monsters you encounter to gain experience and wealth."
+    },
+    {
         "title": "The Secret of Monkey Island",
         "screenshot": "monkey/monkey.png",
         "bin": "monkey/monkey.img",

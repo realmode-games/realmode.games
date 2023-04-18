@@ -3,7 +3,7 @@
         "title": "Bomber och Bumlingar",
         "screenshot": "bomber/bomber.png",
         "bin": "bomber/bomber.img",
-        "options": "mouse=0",
+        "options": "mouse=0&freq=8",
         "description": "Bomber and Bumblingar is a swedish game about trying to avoid dangerous creatures and obstacles like falling rocks, also being crushed or trapped by an avalanche, or killed by an explosion from the bombs."
     },
     {

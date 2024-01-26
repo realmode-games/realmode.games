@@ -47,5 +47,12 @@
         "bin": "wolf3dc/wolf3dc_hd.img",
         "options": "mouse=0&storage=1&freq=16&v20=1",
         "description": "This project is a modification to the original Wolfenstein 3D source release which renders the game in CGA video modes allowing it to be run on a wide variety of old PC hardware."
+    },
+    {
+        "title": "Lemmings",
+        "screenshot": "lemmings/lemmings.png",
+        "bin": "lemmings/lemmings_hd.img",
+        "options": "freq=10",
+        "description": "Lemmings is a puzzle–strategy video game originally developed by DMA Design and published by Psygnosis for the Amiga in 1991 and later ported for numerous other platforms."
     }
 ]
